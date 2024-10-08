@@ -15,7 +15,7 @@ class Project:
         self.github_repo = github_repo
         self.description = description
     def render(self):
-        st.image(self.image_path, width = 250)
+        st.image(self.image_path, width = 300)
         st.markdown(f"### {self.title}")
         github_link = html_anchor_generator("https://", GITHUB_DOMAIN, GITHUB_ICON_LINK, username = self.username, repo = self.github_repo)
         st.markdown(f"""
