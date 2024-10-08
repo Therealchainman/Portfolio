@@ -6,20 +6,22 @@ from utils.constants import GITHUB_ICON_LINK, LINKEDIN_ICON_LINK, GMAIL_ICON_LIN
 st.sidebar.markdown(
     f"""
     <div style='text-align: center;'>
-    {html_anchor_generator(LINKEDIN_DOMAIN, LINKEDIN_ICON_LINK, username = LINKEDIN_USER)}
+    {html_anchor_generator('https://', LINKEDIN_DOMAIN, LINKEDIN_ICON_LINK, username = LINKEDIN_USER)}
     &nbsp;&nbsp;&nbsp;&nbsp;
-    {html_anchor_generator(GITHUB_DOMAIN, GITHUB_ICON_LINK, username = GITHUB_USER)}
+    {html_anchor_generator('https://', GITHUB_DOMAIN, GITHUB_ICON_LINK, username = GITHUB_USER)}
     &nbsp;&nbsp;&nbsp;&nbsp;
-    {html_anchor_generator(f'mailto:{GMAIL_ADDRESS}', GMAIL_ICON_LINK)}
+    {html_anchor_generator('mailto:', {GMAIL_ADDRESS}, GMAIL_ICON_LINK)}
     </div>
     """, 
     unsafe_allow_html = True
 )
 
-pages = [st.Page("_pages/about.py", title = "Home", icon = "👋"),
-        st.Page("_pages/experience.py", title = "Experience", icon = "🏢"), st.Page("_pages/projects.py", title = "Projects", icon = "📈"), 
-        st.Page("_pages/skills.py", title = "Technical Skills", icon = "🧰"), st.Page("_pages/education.py", title = "Education", icon = "🏫"), 
-        st.Page("_pages/blog.py", title = "Blog", icon = "✍️"), st.Page("_pages/contact.py", title = "Contact", icon = "📧")]
+directory = "_pages/"
+
+pages = [st.Page(f"{directory}about.py", title = "Home", icon = "👋"),
+        st.Page(f"{directory}experience.py", title = "Experience", icon = "🏢"), st.Page(f"{directory}projects.py", title = "Projects", icon = "📈"), 
+        st.Page(f"{directory}skills.py", title = "Technical Skills", icon = "🧰"), st.Page(f"{directory}education.py", title = "Education", icon = "🏫"), 
+        st.Page(f"{directory}blog.py", title = "Blog", icon = "✍️"), st.Page(f"{directory}contact.py", title = "Contact", icon = "📧")]
 pg = st.navigation(pages)
 pg.run()
 
