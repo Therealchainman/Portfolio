@@ -1,7 +1,7 @@
 # projects.py
 import streamlit as st
-from utils import html_anchor_generator
-from constants import GITHUB_ICON_LINK, GITHUB_USER, GITHUB_DOMAIN
+from utils.utils import html_anchor_generator
+from utils.constants import GITHUB_ICON_LINK, GITHUB_USER, GITHUB_DOMAIN
 
 # TODO: can host these on in a database and have it connect and load from there in future.
 # TODO: maybe add tech stack used in a project

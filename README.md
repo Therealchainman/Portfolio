@@ -34,4 +34,5 @@ These is what I use to run it locally without docker using a virtual environment
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
+streamlit run main.py
 ```

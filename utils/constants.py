@@ -10,4 +10,4 @@ GITHUB_USER = "therealchainman"
 LINKEDIN_USER = "todd-chaney"
 
 GITHUB_DOMAIN = "github.com"
-LINKEDIN_DOMAIN = "linkedin.com"
+LINKEDIN_DOMAIN = "linkedin.com/in"
