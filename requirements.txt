@@ -1,0 +1,4 @@
+streamlit==1.39.0
+streamlit-pills==0.3.0
+captcha==0.6.0
+email-validator==2.2.0
